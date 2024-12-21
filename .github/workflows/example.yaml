@@ -1,0 +1,12 @@
+on: workflow_dispatch
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: SSlime-s/traq-webhook@v5
+        with:
+          webhook-id: ${{ secrets.WEBHOOK_ID }}
+          webhook-secret: ${{ secrets.WEBHOOK_SECRET }}
+          message: "テスト in:#gps/times/SSlime/bot"
+          embed: true
